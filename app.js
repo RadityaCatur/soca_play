@@ -1,3 +1,8 @@
+import React from 'react'
+import { ReactDOM } from 'react'
+import "./index.css"
+import Quiz from "./views/quiz"
+
 const express = require('express')
 
 require('./utils/db')
