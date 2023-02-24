@@ -1,7 +1,7 @@
-import React from 'react'
-import { ReactDOM } from 'react'
-import "./index.css"
-import Quiz from "./views/quiz"
+// import React from 'react'
+// import { ReactDOM } from 'react'
+// import "./index.css"
+// import Quiz from "./views/quiz"
 
 const express = require('express')
 
@@ -12,7 +12,7 @@ const question = require('./models/question')
 // require('./models/insert_question')
 
 const app = express()
-const port = 3000
+const port = 5000
 
 // setup ejs
 app.set('view engine', 'ejs')
