@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import PlayQuiz from './pages/PlayQuiz'
+import GenshinBasicKnowledge from './pages/GenshinBasicKnowledge'
 import Welcome from './pages/Welcome'
 
 const App = () => {
@@ -8,7 +8,9 @@ const App = () => {
 		<Router>
 			<Routes>
 				<Route path="/" element={<Welcome />} />
-				<Route path="/PlayQuiz" element={<PlayQuiz />} />
+				<Route path="/CharactersMale" element={<GenshinBasicKnowledge />} />
+				<Route path="/CharactersFemale" element={<GenshinBasicKnowledge />} />
+				<Route path="/GenshinBasicKnowledge" element={<GenshinBasicKnowledge />} />
 			</Routes>
 		</Router>
 	)

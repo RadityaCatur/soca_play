@@ -1,29 +1,37 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import PlayQuiz from '../pages/PlayQuiz';
+import { useNavigate } from 'react-router-dom';
+
+// import axios from 'axios'
 
 export default function App() {
+    const navigate = useNavigate()
 	const quizzes = [
 		{
-			_id: "63f6018052247bf78b30e93d",
-            quiz_name: "Genshin Characters Male",
-            author: "Ren",
+			"_id": {
+                "$oid": "63f6018052247bf78b30e93d"
+              },
+            "quiz_name": "Genshin Characters Male",
+            "author": "Ren",
             // images_cover: "img/male.png",
-			rating: 4
+			"rating": 4
 		}, 
         {
-			_id: "63f601a279cceedfa8512612",
-            quiz_name: "Genshin Characters Female",
-            author: "Ren",
+			"_id": {
+                "$oid": "63f601a279cceedfa8512612"
+              },
+            "quiz_name": "Genshin Characters Female",
+            "author": "Ren",
             // images_cover: "img/female.png",
-			rating: 5
+			"rating": 5
 		}, 
         {
-			_id: "63f601a279cceedfa8512613",
-            quiz_name: "Genshin Basic Knowledge",
-            author: "Ren",
+			"_id": {
+                "$oid": "63f601a279cceedfa8512613"
+              },
+            "quiz_name": "Genshin Basic Knowledge",
+            "author": "Ren",
             // images_cover: " ",
-			rating: 5
+			"rating": 5
 		}, 
 	];
 
@@ -46,10 +54,12 @@ export default function App() {
                 {/* {quizzes.map((quizzes) => (
                     <button onClick={handleAnswerButtonClick}> {quizzes.quiz_name} </button>
                 ))} */}
-                <a href="./PlayQuiz"><button>{quizzes[0].quiz_name}</button></a>
-                <a href="./PlayQuiz"><button>{quizzes[1].quiz_name}</button></a>
-                <a href="./PlayQuiz"><button>{quizzes[2].quiz_name}</button></a>
+                {/* <a href="./PlayQuiz/GenshinCharacters/Female"><button>{quizzes[1].quiz_name}</button></a> */}
+                <button onClick={() => navigate('/CharactersMale')}>{quizzes[0].quiz_name}</button>
+                <button onClick={() => navigate('/CharactersFemale')}>{quizzes[1].quiz_name}</button>
+                <button onClick={() => navigate('/GenshinBasicKnowledge')}>{quizzes[2].quiz_name}</button>
             </div>
 		</div>
 	)
 }
+
